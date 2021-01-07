@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style type="text/css">
+    .infocard {
+      background-color: #4fc3f7; 
+      margin: 2% 20% 10% 15%;
+      border-bottom-right-radius: 30%;
+      border-bottom-left-radius: 30%;
+      border-top-right-radius: 30%;
+      width: 30%;
+      transition-duration: 4s;
+      /*padding: top right bottom left;*/
+      padding: 1% 1% 5% 1%;
+    }
+  </style>
+</head>
+<body>
+  <div class="w3-bar w3-white">
+    <button class="w3-bar-item w3-button tablink w3-blue" onclick="openPage(event,'Home')">Home</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openPage(event,'About')">About</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openPage(event,'Resume')">Resume</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openPage(event,'Projects')">Projects</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openPage(event,'CONTACT')">CONTACT</button>
+  </div>
+
+  <!-- Home Tab : -->
+  
+  <div id="Home" class="w3-container pg">
+    <div class="icon-bar">
+      <a href="#" class="github"><i class="fa fa-github"></i></a> 
+      <!-- <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>  -->
+      <a href="#" class="linkedincom"><i class="fa fa-linkedin"></i></a>
+    </div>
+
+  <div><img style="float: right;margin-right: 15%;margin-top: 3%;text-align: center; width: 32%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%;border-top-left-radius: 50%" src="E:\HTML\portfolio\pratu.jpg"></div>
+
+  <container>
+    <p class="info">Hey, I'm Pratiksha. I'm a <span style="color: #31a0cd">Python</span> Developer.</p>
+    <hr style="width: 20%; margin-left: 25%;">
+    <p class="slogan">Know everything about something and something about everything.</p>
+    <hr style="width: 20%; margin-left: 25%;">
+    <a href="E:\HTML\portfolio\Resume.pdf" style="margin-right: 80%"><button class="button button1">Get CV</button></a>
+  </container>
+  </div>
+
+  <!-- About Tab : -->
+
+  <div id="About" class="pg" style="display:none;">
+    <header>
+  <h1 style="color: white; text-align: center;margin: 0; padding: 3%; font-weight: bold;">About Me</h1>
+  <p style="padding: 0% 10% 0% 10%; color: white">I've always had a sense of motivation and passion drive me forward. Whether it's exploring unique opportunities, learning additional skills, or meeting new people, I bring these values to every experience throughout my life on a personal and professional level.</p>
+
+  <p style="padding: 3% 10% 0% 10%; color: #b3e5fc; font-weight: bold;">To learn more about me, keep exploring my site or reach out directly.</p>
+</header>
+  <div class="skillbar">
+    <h1 style="color: #31a0cd; font-weight: bold;">Skill Set</h1>
+    <div class="bar learning" data-skill="CSS3"></div>
+    <div class="bar back basic" data-skill="HTML5"></div>
+    <div class="bar back intermediate" data-skill="Java"></div>
+    <div class="bar front advanced" data-skill="Django"></div>
+    <div class="bar front expert" data-skill="Python"></div>
+
+  </div>
+</div>
+
+  <!-- Resume Tab : --> 
+
+  <div id="Resume" class="w3-container pg" style="display:none">
+    <div style="text-align: center;"><img style="margin-top: 1%; width: 55%; height: auto;" src="E:\HTML\portfolio\CV.jpg"></div>
+  </div>
+
+  <!-- Projects Tab : --> 
+
+  <div id="Projects" class="w3-container pg" style="display:none">
+    <div>
+  <div class="card">
+    <p style="font-size: 12px; font-weight: bold;">Flutter Covid App</p>
+    <img src="E:\HTML\portfolio\app.jpg" style="width: 50%;">
+    <p><a id="fltrBtn" href="#">Know more</a></p>
+  </div>
+  <div class="card">
+    <p style="font-size: 12px; font-weight: bold;">Django Blog App</p>
+    <img src="E:\HTML\portfolio\app.jpg" style="width: 50%;">
+    <p><a id="djangoBtn" href="#">Know more</a></p>
+  </div>
+  </div>
+
+  <!-- below is covid app dialog box -->
+
+  <div id="flutter" class="fltr">
+
+  <!-- Modal content -->
+  <div class="fltr-content">
+    <div class="fltr-header">
+      <span class="close">&times;</span>
+      <h2>Flutter Covid App</h2>
+    </div>
+    <div class="fltr-body">
+      <p>Some text in the Covid App</p>
+      <p>Some other text...</p>
+    </div>
+    <!-- <div class="fltr-footer">
+      <h3>Modal Footer</h3>
+    </div> -->
+  </div>
+
+</div>
+
+<!-- below is blog app dialog box -->
+
+<div id="django" class="djngo">
+
+  <!-- Modal content -->
+  <div class="djngo-content">
+    <div class="djngo-header">
+      <span class="close">&times;</span>
+      <h2>Django Blog App</h2>
+    </div>
+    <div class="djngo-body">
+      <p>Some text in the Blog App</p>
+      <p>Some other text...</p>
+    </div>
+  </div>
+
+</div>
+
+  <script>
+
+  // below is of covid app card
+
+// Get the modal
+var fltr = document.getElementById("flutter");
+
+// Get the button that opens the modal
+var covidbtn = document.getElementById("fltrBtn");
+
+// Get the <span> element that closes the modal
+var fltrSpan = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+covidbtn.onclick = function() {
+  fltr.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+fltrSpan.onclick = function() {
+  fltr.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == fltr) {
+    fltr.style.display = "none";
+  }
+}
+
+// below is of blog app card
+
+// Get the modal
+var djngo = document.getElementById("django");
+
+// Get the button that opens the modal
+var blogbtn = document.getElementById("djangoBtn");
+
+// Get the <span> element that closes the modal
+var djngoSpan = document.getElementsByClassName("close")[1];
+
+// When the user clicks the button, open the modal 
+blogbtn.onclick = function() {
+  djngo.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+djngoSpan.onclick = function() {
+  djngo.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == djngo) {
+    djngo.style.display = "none";
+  }
+}
+</script>
+  </div>
+
+  <!-- Contact Tab : -->
+
+  <div id="CONTACT" class="pg" style="display:none">
+    <div class="container">
+  <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+    <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#607d8b;"></path>
+    <div style="text-align: center;"><img src="E:\HTML\portfolio\contact.png" style="width: 35%;margin-top: 10%; line-height: 0;position: relative;"></div>
+    <h1 style="text-align: center; color: #607d8b; font-size: 50px; line-height: 1">Pratiksha Shinde</h1>
+    <hr style="width: 100%">
+    <h4 style="text-align: center; color: #263238; font-weight: bold;">FOLLOW ME</h4>
+      <a href="https://www.linkedin.com/" class="icon-button linkedin"><b class="fa fa-linkedin"></b><span></span></a>
+      <a href="https://github.com" class="icon-button github" style="line-height: 0"><b class="fa fa-github"></b><span></span></a>
+
+      <p style="line-height: 0">Email : er.pratikshashinde@gmail.com</p>
+      <p>Phone : +91 72196 22570</p>
+
+  </svg>
+</div>
+  </div>
+
+  <!-- below is of tabs change js code -->
+
+  <script>
+function openPage(evt, pageName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("pg");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-blue", "");
+  }
+  document.getElementById(pageName).style.display = "block";
+  evt.currentTarget.className += " w3-blue";
+}
+</script>
+</body>
+</html>
